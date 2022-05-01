@@ -1,24 +1,29 @@
 const Reader = require("./lib/utils/Reader");
+const ExplorerService = require("./lib/services/ExplorerService");
 
-// Part 1 Read json file ===========================
+
 const explorers = Reader.readJsonFile("explorers.json"); // esto regresa la lista de explorers del archivo
-
-// const rawdata = fs.readFileSync("explorers.json");
-// const explorers = JSON.parse(rawdata);
-// console.log("Lista de explorers")
+// console.log("Refactorizada la obtención de explorers con la clase Reader:\n\n")
 // console.log(explorers)
-console.log("Refactorizada la obtención de explorers con la clase Reader:\n\n")
-console.log(explorers)
 
 
-// Part 2: Get the quantity of explorers names in node
-const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
-// console.log(explorersInNode.length)
+// Aplicación del ExplorerService sobre la lista de explorers
+const explorersByMission = ExplorerService.filterByMission(explorers, "node");
+const amountOfExplorersByMission = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
+const usernamesOfExplorersByMission = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+console.log(explorersByMission);
+console.log(amountOfExplorersByMission);
+console.log(usernamesOfExplorersByMission);
 
-// Part4: Get the explorer's usernames in Node
-const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
-const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
-// console.log(usernamesInNode)
+
+// // Part 2: Get the quantity of explorers names in node
+// const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
+// // console.log(explorersInNode.length)
+
+// // Part4: Get the explorer's usernames in Node
+// const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
+// const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
+// // console.log(usernamesInNode)
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
