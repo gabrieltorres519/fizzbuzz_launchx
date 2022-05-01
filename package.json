@@ -4,7 +4,7 @@
   "description": "refactorización_de_código_legado",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/test" 
+    "test": "node ./node_modules/.bin/jest" 
   },
   "repository": {
     "type": "git",
