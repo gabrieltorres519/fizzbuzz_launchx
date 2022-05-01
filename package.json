@@ -1,0 +1,22 @@
+{
+  "name": "fizzbuzz_launchx",
+  "version": "1.0.0",
+  "description": "refactorización_de_código_legado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieltorres519/fizzbuzz_launchx.git"
+  },
+  "author": "gabrieltorres519",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrieltorres519/fizzbuzz_launchx/issues"
+  },
+  "homepage": "https://github.com/gabrieltorres519/fizzbuzz_launchx#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
